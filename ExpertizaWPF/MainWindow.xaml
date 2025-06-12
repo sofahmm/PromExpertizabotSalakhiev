@@ -20,12 +20,9 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image Source="/Recources/operator.jpg"
+        <Image Source="Recources/operator.jpg"
                Grid.RowSpan="2"/>
         
-        <!--<DataGrid x:Name="RequestsLV"
-                  AutoGenerateColumns="True"
-                  Margin="10"/>-->
         <Button x:Name="requestBtn"
                 Grid.Row="2"
                 Content="Заявки"

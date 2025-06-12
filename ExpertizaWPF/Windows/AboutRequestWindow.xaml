@@ -1,0 +1,122 @@
+﻿<Window x:Class="ExpertizaWPF.Windows.AboutRequestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ExpertizaWPF.Windows"
+        mc:Ignorable="d"
+        Title="AboutRequestWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/> 
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Информация о заявке №"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="3"
+                   FontSize="24"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Right"/>
+        <TextBlock x:Name="IdRequestTbl"
+                   Grid.Column="4"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Left"/>
+        <TextBlock Grid.Row="1"
+                   Grid.ColumnSpan="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Right"
+                   FontSize="24"
+                   Text="Имя пользователя:"/>
+        <TextBlock Grid.Row="1"
+                   x:Name="UserNameTbl"
+                   Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="24"/>
+        <TextBlock Grid.Row="2" 
+           Grid.ColumnSpan="2"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Right"
+           FontSize="24"
+           Text="Ответственный за заявку:"/>
+        <TextBlock Grid.Row="2"
+           x:Name="ExecutorNameTbl"
+           Grid.Column="2"
+           Grid.ColumnSpan="2"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center"
+           FontSize="24"/>
+        <TextBlock Grid.Row="1"
+                   Grid.Column="4"
+           Grid.ColumnSpan="2"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center"
+           FontSize="24"
+           Text="Статус заявки:"/>
+        <TextBlock Grid.Row="2"
+                   Grid.Column="4"
+                   Grid.ColumnSpan="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="24"
+                   FontWeight="Bold"
+                   x:Name="StatusTbl"/>
+        <TextBlock Grid.Row="3"
+                   Grid.ColumnSpan="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="24"
+                   Text="Описание:"/>
+        <TextBlock Grid.Row="4"
+                   Grid.RowSpan="2"
+                   Grid.ColumnSpan="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="24"
+                   x:Name="DescriptionTbl"/>
+        <TextBlock Grid.Row="3"
+                   Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="24"
+                   Text="Дата обращения:"/>
+        <TextBlock Grid.Row="4"
+                   Grid.Column="2"
+                   Grid.ColumnSpan="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="24"
+                   x:Name="DateCreateTbl"/>
+        <TextBlock Grid.Row="3"
+                   Grid.Column="4"
+                   Grid.ColumnSpan="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="24"
+                   Text="Дата закрытия заявки:"/>
+        <TextBlock Grid.Row="4"
+                   Grid.Column="4"
+                   Grid.ColumnSpan="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="24"
+                   x:Name="DateCloseTbl"/>
+    </Grid>
+</Window>
