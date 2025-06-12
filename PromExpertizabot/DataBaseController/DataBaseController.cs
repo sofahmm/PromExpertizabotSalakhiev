@@ -181,9 +181,7 @@ namespace Database
 					command.Parameters.AddWithValue("@where_" + item.Key, item.Value);
 				}
 
-				//Console.WriteLine(command.CommandText);
 				int affectedRows = command.ExecuteNonQuery();
-				//Log($"==DATA BASE UPDATE== affected rows: {affectedRows}");
 			}
 		}
 

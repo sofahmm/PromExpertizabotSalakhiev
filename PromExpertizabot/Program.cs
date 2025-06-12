@@ -96,14 +96,14 @@ namespace PromExpertizabot
 				var update_message = update.Message;
 				var userMessage = update.Message.Text;
 				var chatID = update_message.Chat.Id;
-				var message_text = update_message.Text.ToLower();
+				var message_text = update_message?.Text?.ToLower();
 
 				Console.WriteLine($"{System.DateTime.Now} | {update.Message.Chat.Username}: {message_text}");
 
 				//ДЭФОЛТНЫЕ СООБЩЕНИЯ//ДЭФОЛТНЫЕ СООБЩЕНИЯ//ДЭФОЛТНЫЕ СООБЩЕНИЯ//ДЭФОЛТНЫЕ СООБЩЕНИЯ//ДЭФОЛТНЫЕ СООБЩЕНИЯ//ДЭФОЛТНЫЕ СООБЩЕНИЯ
 				var userStatus = DataBaseController.Select("Users", new Dictionary<string, dynamic> { { "TG_ID", chatID } }).Select(d => (string)d["USER_STATUS"]).ToList();
 				if (update.Type == UpdateType.Message
-					&& update_message.Text != null)
+					&& update_message?.Text != null)
 				{
 					if (message_text == "")
 					{

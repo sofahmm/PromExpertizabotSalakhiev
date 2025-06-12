@@ -43,6 +43,7 @@
                    VerticalAlignment="Center"
                    HorizontalAlignment="Right"
                    FontSize="24"
+                   FontWeight="Bold"
                    Text="Имя пользователя:"/>
         <TextBlock Grid.Row="1"
                    x:Name="UserNameTbl"
@@ -58,6 +59,7 @@
                    TextWrapping="Wrap"
                    TextAlignment="Right"
            FontSize="24"
+                   FontWeight="Bold"
            Text="Ответственный за заявку:"/>
         <TextBlock Grid.Row="2"
            x:Name="ExecutorNameTbl"
@@ -72,6 +74,7 @@
            VerticalAlignment="Center"
            HorizontalAlignment="Center"
            FontSize="24"
+                   FontWeight="Bold"
            Text="Статус заявки:"/>
         <TextBlock Grid.Row="2"
                    Grid.Column="4"
@@ -86,13 +89,16 @@
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    FontSize="24"
+                   FontWeight="Bold"
                    Text="Описание:"/>
         <TextBlock Grid.Row="4"
                    Grid.RowSpan="2"
                    Grid.ColumnSpan="2"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
-                   FontSize="24"
+                   FontSize="18"
+                   TextAlignment="Center"
+                   TextWrapping="Wrap"
                    x:Name="DescriptionTbl"/>
         <TextBlock Grid.Row="3"
                    Grid.Column="2"
@@ -100,6 +106,7 @@
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    FontSize="24"
+                   FontWeight="Bold"
                    Text="Дата обращения:"/>
         <TextBlock Grid.Row="4"
                    Grid.Column="2"
@@ -114,6 +121,7 @@
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    FontSize="24"
+                   FontWeight="Bold"
                    Text="Дата закрытия заявки:"/>
         <TextBlock Grid.Row="4"
                    Grid.Column="4"

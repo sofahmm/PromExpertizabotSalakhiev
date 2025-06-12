@@ -41,8 +41,11 @@
                         <StackPanel Grid.Column="1"
                                     Orientation="Vertical"
                                     Margin="5">
-                            <TextBlock Text="{Binding Description,StringFormat={}Описание проблемы: {0}}"/>
-                            <TextBlock Text="{Binding Status,StringFormat={}Статус заявки: {0}}"/>
+                            <TextBlock Text="{Binding Description,StringFormat={}Описание проблемы: {0}}"
+                                       TextWrapping="Wrap"
+                                       Width="200"/>
+                            <TextBlock Text="{Binding Status,StringFormat={}Статус заявки: {0}}"
+                                       FontWeight="Bold"/>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>

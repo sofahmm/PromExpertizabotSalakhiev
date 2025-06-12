@@ -91,7 +91,7 @@ namespace ModeratorController
 				{
 					string listObjects = "Первый /1 \nВторой /2 \nТретий /3 \nЧетвертый /4 \nПятый /5 \nШестой /6";
 
-					await bot.SendMessage(chatID, $"Ввыбирите объект пользователя:\n{listObjects}");
+					await bot.SendMessage(chatID, $"Выберите объект пользователя:\n{listObjects}");
 
 					DataBaseController.Update(
 						new Dictionary<string, dynamic> {
