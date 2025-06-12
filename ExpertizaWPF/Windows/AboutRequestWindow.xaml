@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExpertizaWPF.Windows"
         mc:Ignorable="d"
-        Title="AboutRequestWindow" Height="450" Width="800">
+        Title="ПРОМЭКСПЕРТИЗА" 
+        Icon="pack://application:,,,/Recources/PromExp.jpg"
+        Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -53,6 +55,8 @@
            Grid.ColumnSpan="2"
            VerticalAlignment="Center"
            HorizontalAlignment="Right"
+                   TextWrapping="Wrap"
+                   TextAlignment="Right"
            FontSize="24"
            Text="Ответственный за заявку:"/>
         <TextBlock Grid.Row="2"

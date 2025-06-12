@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExpertizaWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ПРОМЭКСПЕРТИЗА" 
+        Icon="pack://application:,,,/Recources/PromExp.jpg" Height="450" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -20,28 +21,34 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Image Source="Recources/operator.jpg"
-               Grid.RowSpan="2"/>
-        
+
+        <Image Source="pack://application:,,,/Recources/PromExp.jpg" Grid.RowSpan="2"/>
+
         <Button x:Name="requestBtn"
                 Grid.Row="2"
+                Height="50"
+                Width="190"
+                Foreground="White"
+                Background="#167e22"
                 Content="Заявки"
                 FontSize="20"
                 Click="requestBtn_Click"/>
-        <Button x:Name="requesterBtn"
+        <Button x:Name="report1Btn"
+                Height="50"
+Width="190"
+                Click="report1Btn_Click"
                 Grid.Row="3">
-            <TextBlock Text="Основная информация"
+            <TextBlock Text="Отчет за сегодня"
                        TextWrapping="Wrap"
                        TextAlignment="Center"
                        FontSize="20"/>
         </Button>
         <Button x:Name="reportBtn"
                 Grid.Row="4"
-                Content="Отчеты"
-                FontSize="20"/>
-        <Button x:Name="exitBtn"
-                Grid.Row="4"
-                Content="Отчеты"
+                Height="50"
+Width="190"
+                Click="reportBtn_Click"
+                Content="Отчет по статусу"
                 FontSize="20"/>
         <Frame Grid.Column="1"
                Grid.RowSpan="7"

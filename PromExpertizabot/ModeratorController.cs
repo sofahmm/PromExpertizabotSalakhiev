@@ -89,7 +89,7 @@ namespace ModeratorController
 
 				else if (userStatus[0] == "Модерация пользователя 3")//ФАМИЛИЯ
 				{
-					string listObjects = "Первый /1";
+					string listObjects = "Первый /1 \nВторой /2 \nТретий /3 \nЧетвертый /4 \nПятый /5 \nШестой /6";
 
 					await bot.SendMessage(chatID, $"Ввыбирите объект пользователя:\n{listObjects}");
 

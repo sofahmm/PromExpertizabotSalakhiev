@@ -184,7 +184,7 @@ namespace PromExpertizabot
 							}
 							
 						}
-						else if (message_text != "/start")
+						else if (message_text == "/start")
 						{
 							DataBaseController.Insert(
 							new Dictionary<string, dynamic>{
@@ -200,7 +200,7 @@ namespace PromExpertizabot
 							List<string> buttons = arData.Select(d => (string)d["NAME"]).ToList();
 							List<string> callbacks = arData.Select(d => (string)d["CODE"]).ToList();
 							//replyMarkup: GetInlineKeyboard(buttons, callbacks)
-							await bot.SendMessage(chatID, "Здравствуйте! Ваш аккаунт на модерации, пожалуйста подождите");
+							await bot.SendMessage(chatID, $"Здравствуйте! Ваш аккаунт на модерации, пожалуйста подождите");
 
 							var moderator = DataBaseController.Select("Users", new Dictionary<string, dynamic> { { "USER_ROLE", "Модератор" } }).Select(d => (string)d["TG_ID"]).ToList();
 							if (moderator.Count > 0)

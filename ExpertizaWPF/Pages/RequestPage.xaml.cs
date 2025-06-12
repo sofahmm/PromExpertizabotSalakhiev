@@ -1,6 +1,7 @@
 ﻿using ExpertizaWPF.DataBase;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -75,10 +76,17 @@ namespace ExpertizaWPF.Pages
         private void SearchExecuterTb_TextChanged(object sender, TextChangedEventArgs e)
         {
             if(SearchExecuterTb.Text != "")
-                RequestsLv.ItemsSource = dbService.GetAllAplications().Where(i => i.Description != null && i.Description.ToLower()
-                .Contains(SearchExecuterTb.Text.Trim().ToLower())).ToList();
+            {
+                if(SearchExecuterTb.Text == string.Empty || SearchExecuterTb.Text == "Поиск по описанию")
+                    RequestsLv.ItemsSource = dbService.GetAllAplications();
+                else
+                    RequestsLv.ItemsSource = dbService.GetAllAplications().Where(i => i.Description != null && i.Description.ToLower()
+                                    .Contains(SearchExecuterTb.Text.Trim().ToLower())).ToList();
+
+            }
             else
                 RequestsLv.ItemsSource = dbService.GetAllAplications();
+
         }
 
         private void RequestsLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -88,5 +96,15 @@ namespace ExpertizaWPF.Pages
             aboutRequestWindow.Show();
 
         }
+
+        private void SearchExecuterTb_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (SearchExecuterTb.Text == string.Empty)
+                SearchExecuterTb.Text = "Поиск по описанию";
+            else if(SearchExecuterTb.Text == "Поиск по описанию")
+                SearchExecuterTb.Text = string.Empty;   
+        }
     }
+   
+
 }
