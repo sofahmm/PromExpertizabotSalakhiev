@@ -13,7 +13,7 @@ namespace ExpertizaWPF.DataBase
         public string? Executor { get; set; }
         public string? Type { get; set; }
         public string? Description { get; set; }
-        public string? Status { get; set; }
+        public string? Status { get; set; } 
         public string? Date_create { get; set; }
         public string? Date_close { get; set; }
         public string? Object_Id { get; set; }
