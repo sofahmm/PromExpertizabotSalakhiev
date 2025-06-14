@@ -92,9 +92,11 @@ namespace ExpertizaWPF.Pages
         private void RequestsLv_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var t = RequestsLv.SelectedItem as DataBase.Application;
+            if (t == null)
+                return;
             Windows.AboutRequestWindow aboutRequestWindow = new Windows.AboutRequestWindow(t);
             aboutRequestWindow.Show();
-
+            RequestsLv.SelectedItem = null;
         }
 
         private void SearchExecuterTb_MouseDoubleClick(object sender, MouseButtonEventArgs e)
